@@ -1,5 +1,3 @@
-var finished = false;
-
 $( document ).ready(function() {
   //lê os parâmetros na URL
   $.urlParam = function(name){
@@ -195,9 +193,9 @@ var NewBlob = function(data, datatype)
   //cria cada gráfico
   $(".container").each(function() {
       //var url = "../../back/single_ajax.php";
-	  var url = "http://c3283faaea.undercloud.net/doriclaudino/teste/single_ajax.php";
-      var hostid = $(this).attr("hostid");
-      //var hostid = $.urlParam("hostid");
+	  var url = "http://c3283faaea.undercloud.net/doriclaudino/highchart-phantomjs/single_ajax.php";
+      //var hostid = $(this).attr("hostid");
+      var hostid = $.urlParam("hostid");
 	  var report_timesince = $.urlParam("report_timesince");
       var report_timetill = $.urlParam("report_timetill");
       var _key = $(this).attr("_key");
@@ -268,8 +266,6 @@ var NewBlob = function(data, datatype)
 			}
 		}		
 	  });
-	  
-	  finished=true;
 	  
 	  //remove os containers para diminuir o tamanho
 	  $(".highcharts-container").remove();
