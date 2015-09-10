@@ -39,13 +39,14 @@ if(args.length>1){
 			mail.open("http://c3283faaea.undercloud.net/doriclaudino/highchart-phantomjs/envia_email.php?filename="+arquivo, function(status) {
 				console.log('Enviando email ' + status);
 			});			
-		}, 1000);
+		}, 3000);
 		
 	};
 	
 	mail.onLoadFinished = function() {
-		console.log('Email enviado');
-		phantom.exit();
+		window.setTimeout(function () {
+			phantom.exit();
+		},3000)
 	};
 	
 }else{
