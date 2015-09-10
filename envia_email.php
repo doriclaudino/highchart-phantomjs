@@ -43,8 +43,8 @@ for($i = 0; $i < Count($enderecos); $i++){
 	$mail->AddAddress($enderecos[$i]);  
 }
 
-$mail->AddAddress("dorival@nvl.inf.br");  
-$mail->AddAddress("dori.claudino@gmail.com"); 
+//$mail->AddAddress("dorival@nvl.inf.br");  
+//$mail->AddAddress("dori.claudino@gmail.com"); 
 
 
 $f = $filename;    //String file path

@@ -12,6 +12,8 @@ if(args.length>1){
 	//var pagina = 'index.html';
 	var arquivo = args[2];
 	//var arquivo = 'teste.html';
+	var destinatarios = args[3];
+	//var arquivo = 'teste.html';
 	
 	//page.open(args[1], function(status) {
 	//args[1] é a url com parametros, obs.: parametros nao funcionam chamada de arquivo local.
@@ -36,7 +38,7 @@ if(args.length>1){
 			
 			fs.write(arquivo, content, 'w');
 			
-			mail.open("http://c3283faaea.undercloud.net/doriclaudino/highchart-phantomjs/envia_email.php?filename="+arquivo, function(status) {
+			mail.open("http://c3283faaea.undercloud.net/doriclaudino/highchart-phantomjs/envia_email.php?filename="+arquivo+"&destinatarios="+destinatarios, function(status) {
 				console.log('Enviando email ' + status);
 			});			
 		}, 3000);
