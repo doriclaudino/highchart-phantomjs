@@ -36,7 +36,7 @@ if(args.length>1){
 			
 			fs.write(arquivo, content, 'w');
 			
-			mail.open("http://c3283faaea.undercloud.net/doriclaudino/teste/envia_email.php?filename="+arquivo, function(status) {
+			mail.open("http://c3283faaea.undercloud.net/doriclaudino/highchart-phantomjs/envia_email.php?filename="+arquivo, function(status) {
 				console.log('Enviando email ' + status);
 			});			
 		}, 1000);
